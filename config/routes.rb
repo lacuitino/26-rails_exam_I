@@ -3,4 +3,7 @@ Rails.application.routes.draw do
  #creacoin de ruta
   get 'todos', to: 'todos#index'
   get 'todos/new'
+
+  get 'todos', to: 'todos#create'
+  
 end
