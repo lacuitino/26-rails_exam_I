@@ -1,0 +1,6 @@
+<%= link_to "Crear", todos_new_path, class: 'btn btn-info' %>
+
+<% @todos.each do |x| %>
+<%= x.description %>
+<%= x.completed%>
+<% end %>
