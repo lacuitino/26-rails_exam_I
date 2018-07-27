@@ -3,6 +3,9 @@
 <% @todos.each do |x| %>
 <%= x.description %>
 <%= x.completed%>
+
 <%= link_to "Mostrar",x, class: 'btn btn-info' %>
-<%= link_to "Editar",edit_todo_path(x), class: 'btn btn-info' %>
+<%= link_to "Editar", edit_todo_path(x), class: 'btn btn-info' %>
+<%= link_to "Destroy", x, method: :delete, class: 'btn btn-info' %>
+
 <% end %>
