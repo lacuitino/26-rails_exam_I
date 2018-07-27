@@ -1,11 +1,24 @@
 <%= link_to "Crear", todos_new_path, class: 'btn btn-info' %>
+<p></p>
+<br>
 
 <% @todos.each do |x| %>
-<%= x.description %>
-<%= x.completed%>
 
-<%= link_to "Mostrar",x, class: 'btn btn-info' %>
-<%= link_to "Editar", edit_todo_path(x), class: 'btn btn-info' %>
-<%= link_to "Destroy", x, method: :delete, class: 'btn btn-info' %>
-<%= link_to "Completed", complete_todo_path(x), class: 'btn btn-info' %>
+<div class="row">
+
+  <div class="col-md-3">
+    <%= x.description %>
+    <%= x.completed%>
+  </div>
+
+<div class="col-md-7">
+  <%= link_to "Mostrar",x, class: 'btn btn-info' %>
+  <%= link_to "Editar", edit_todo_path(x), class: 'btn btn-info' %>
+  <%= link_to "Destroy", x, method: :delete, class: 'btn btn-info' %>
+  <%= link_to "Completed", complete_todo_path(x), class: 'btn btn-info' %>
+  <p></p>
+</div>
+
+</div>
+
 <% end %>
