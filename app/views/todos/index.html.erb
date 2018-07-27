@@ -3,4 +3,5 @@
 <% @todos.each do |x| %>
 <%= x.description %>
 <%= x.completed%>
+<%= link_to "Mostrar",x, class: 'btn btn-info' %>
 <% end %>
